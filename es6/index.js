@@ -2,15 +2,15 @@
 
 //variables
 
-const My_CONST = 1;
-
-let v = 1;
-
-for (let i = 0; i < 5; i++){
-    setTimeout(function(){
-        console.log(i);
-    }, 1000);
-}
+// const My_CONST = 1;
+//
+// let v = 1;
+//
+// for (let i = 0; i < 5; i++){
+//     setTimeout(function(){
+//         console.log(i);
+//     }, 1000);
+// }
 
 
 //#############################################################
@@ -28,7 +28,7 @@ const original = function () {
 
 // const arrow2 = (shift, offset) => (150 + shift) * offset;
 
-const arrow3 = shift => (150 + shift);
+// const arrow3 = shift => (150 + shift);
 
 //#############################################################
 // ===== problem ======
@@ -177,5 +177,149 @@ const age = 30;
 // console.log(createPerson('John', 'Doe', 'age'));
 
 
+//##########################6###################################
+//destrucure object
+//es5
+// let obj = {
+//     name: 'John',
+//     age: 20
+// }
+//
+// let name = obj.name;
+// let age = obj.age;
+//
+// console.log(name, age);
 
-//#############################################################
+//es6 v1
+// let obj = {
+//     name: 'John',
+//     age: 20
+// }
+//
+// let {name} = obj;
+// let {age} = obj;
+//
+// console.log(name, age);
+
+
+//es6 v2
+// let obj = {
+//     name: 'John',
+//     age: 20
+// }
+//
+// let {name, age} = obj;
+//
+// console.log(name, age);
+
+
+//es6 v3
+// let obj = {
+//     name: 'John',
+//     age: 20
+// }
+//
+// let {name: n, age: a} = obj;
+//
+// console.log(n, a);
+
+//destrucure array
+//es 5
+// array = ['WFM', 30, 'red'];
+//
+// let name = array[0];
+// let age = array[1];
+// let color = array[2];
+//
+// console.log(name + ' ' + age + ' ' + color);
+
+//es6
+// array = ['WFM', 30, 'red'];
+//
+// let [name, age, color] = array;
+// console.log(name + ' ' + age + ' ' + color);
+//
+// let [name,, color] = array;
+// console.log(name + ' ' + color);
+//
+// let [,, color] = array;
+// console.log(color);
+//
+// let [,,,someVariable = "str"] = array;
+// console.log(someVariable);
+
+
+//##########################7###################################
+// ======= new operator Rest
+
+// es5
+// function logStrings(num, str, str2, str3) {
+//     var args = Array.prototype.slice.call(arguments);
+//     console.log(num, args)
+// }
+// logStrings(20, 'kavabanga', 'WFM', 'qwerty');
+
+// es6
+// function logStrings(num, ... args) {
+//     console.log(num, args)
+// }
+// logStrings(20, 'kavabanga', 'WFM', 'qwerty');
+
+// ======== new operator Spread
+
+// let spreadArray = ['s1', 's2', 's3', 's4'];
+// logStrings(20, ... spreadArray);
+
+
+//##########################8###################################
+// ===== strings
+
+// es5
+// let name = 'WFM';
+// let str1 = 'Hello ' + name + ', glad to see you';
+// console.log(str1);
+
+// es6
+// let name = 'WFM';
+// let str1 = `Hello ${name}, glad to see you! ${5 + 10}`;
+// let str2 = `Hello '${name}', glad to see you! ${5 + 10}`;
+// let str3 = `Hello '${name}', glad to see "you"! ${5 + 10}`;
+//
+// let html = `
+//     <div>
+//         <h1>Hello World</h1>
+//         <p>
+//         text text text text text text text text text text text text text text text text text text text text
+//         </p>
+//     </div>
+// `;
+//
+// console.log(str1);
+// console.log(str2);
+// console.log(str3);
+// console.log(html);
+
+//##########################9###################################
+// ======= cycles
+
+// es5
+// const array = [1, 2,3,4,5,];
+//
+// for (let i = 0; i < array.length; i++){
+//     console.log(array[i])
+// }
+//
+// array.forEach(function (item) {
+//     console.log(item)
+// });
+
+// es6
+// const array = [1, 2,3,4,5,];
+// for (let item of array) {
+//     console.log(item)
+// }
+
+// es6
+// for (let item of 'ABCDFG') {
+//     console.log(item)
+// }
